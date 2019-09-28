@@ -7,3 +7,12 @@ create table if not exists public.session
     session_id varchar(256) not null,
     primary key (user_id)
 );
+
+create table if not exists public.news
+(
+    news_id    int primary key,
+    news_date  date,
+    news_title varchar,
+    news_text  varchar
+);
+
