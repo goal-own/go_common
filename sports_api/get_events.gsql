@@ -1,0 +1,23 @@
+{
+  stat_match(id: "18382217", source: GLOBAL) {
+    match_started: events(radarType: ["match_started"]) {
+      id
+      time
+    }
+    break_start: events(radarType: ["break_start"]) {
+      id
+      time
+    }
+  yellow_card: events(radarType: ["yellow_card"]) {
+    id
+    time
+    value {
+      ... on statYellowCard {
+        matchTime
+        player {id}
+        team
+      }
+    }
+  }
+  }
+}
