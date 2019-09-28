@@ -6,12 +6,13 @@ This page contains an example of how to describe the API structure
 
 ## Response
 ```
-{[
-      {
+{
+      "data":[{
           "userId": long,
           "name"  : string,
           "age"   : int
-      }
+      },
+      "errorCode":Int
 ]}
 ```
 # News
@@ -20,15 +21,16 @@ This page contains an example of how to describe the API structure
 
 ## Response
 ```
-{[
-      {
+{
+      "data":[{
           "newsId"  : long,
           "date"    : string,
           "time"    : string,
           "title"   : string,
           "likeNum" : long
-      }
-]}
+      }],
+      "errorCode":Int
+}
 ```
 # Matches
 ## Request
@@ -36,8 +38,8 @@ This page contains an example of how to describe the API structure
 
 ## Response
 ```
-{[
-      {
+{
+      "data":[{
           "matchId"   : long,
           "started"   : boolean,
           "startTime" : string,
@@ -45,8 +47,10 @@ This page contains an example of how to describe the API structure
           "teamScore2": int,
           "teamName1" : string,
           "teamName2" : long
-      }
-]}
+      }],
+      "errorCode":Int
+
+}
 ```
 # Stories
 ## Request
@@ -54,12 +58,26 @@ This page contains an example of how to describe the API structure
 
 ## Response
 ```
-{[
-      {
-        "userId" : Int,
-        "userFirstName"  : String,
-        "userSecondName" : String,
-        "previewUrl" : String
-      }
-]}
+{
+      "data":[{
+              "userId" : Int,
+              "userFirstName"  : String,
+              "userSecondName" : String,
+              "previewUrl" : String
+      }],
+      "errorCode":Int
+}
+```
+
+# Image
+## Request
+```POST /media/submit-image?session_id='1234'```
+body: contain binary file
+header: content-type=Image
+## Response
+```
+{
+      "data": null,
+      "errorCode":Int
+}
 ```
