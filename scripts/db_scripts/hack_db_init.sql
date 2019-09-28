@@ -1,0 +1,9 @@
+create schema if not exists public;
+
+create table if not exists public.session
+(
+    user_id    bigint,
+    token      varchar(256) not null,
+    session_id varchar(256) not null,
+    primary key (user_id)
+);
