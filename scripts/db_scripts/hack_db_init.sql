@@ -7,3 +7,11 @@ create table if not exists public.session
     session_id varchar(256) not null,
     primary key (user_id)
 );
+
+CREATE TABLE IF NOT EXISTS public.stories
+(
+    session_id VARCHAR(256),
+    stories    VARCHAR NOT NULL,
+    PRIMARY KEY (session_Id)
+)
+;
