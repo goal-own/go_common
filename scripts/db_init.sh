@@ -24,5 +24,7 @@ psql -d $db_name -f db_scripts/hack_db_init.sql;
 
 psql -d $db_name -c "grant all on session to $db_user;"
 psql -d $db_name -c "grant all on news to $db_user;"
+psql -d $db_name -c "grant all on stories to $db_user;"
+
 
 psql -d $db_name -f db_scripts/hack_db_bone_news_insert.sql;
