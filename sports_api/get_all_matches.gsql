@@ -8,8 +8,15 @@
         scheduledAt
         currentMinute
         status
-        home{team{id,name,country{name},logo{main}}}
-				away{team{id,name,country{name},logo{main}}}
+        home{score,team{id,name,country{name},logo{main}}}
+				away{score,team{id,name,country{name},logo{main}}}
+      	referees{name}
+        events(radarType:"all"){
+          id
+          time
+          period
+
+        }
       }
     }
   }
