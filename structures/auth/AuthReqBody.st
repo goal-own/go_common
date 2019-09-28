@@ -1,0 +1,3 @@
+{
+    friends : List<VkUser>
+} : VkUser
