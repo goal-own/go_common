@@ -8,6 +8,14 @@ create table if not exists public.session
     primary key (user_id)
 );
 
+create table if not exists public.news
+(
+    news_id    int primary key,
+    news_date  date,
+    news_title varchar,
+    news_text  varchar
+);
+
 CREATE TABLE IF NOT EXISTS public.stories
 (
     session_id VARCHAR(256),
