@@ -18,8 +18,9 @@ create table if not exists public.news
 
 CREATE TABLE IF NOT EXISTS public.stories
 (
+    stories_id BIGINT,
     session_id VARCHAR(256),
     stories    VARCHAR NOT NULL,
-    PRIMARY KEY (session_Id)
+    PRIMARY KEY (stories_id)
 )
 ;
